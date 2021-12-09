@@ -48,6 +48,7 @@ InitMarkerBarberShop = function()
     end
     end)
     print("Le Barber Shop a Bien chargé !")
+    print("By eDen and Aurezia")
 end
 
 
