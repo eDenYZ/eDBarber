@@ -158,9 +158,16 @@ OpenMenuBarber = function()
                     TriggerEvent("skinchanger:change", "lipstick_4", eDBarber.Barber.CouleurRougeLevre.Secondaire[2])
                 end
             }, 7)
-
+        main.Closed = function()
+            ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin, jobSkin)
+                TriggerEvent('skinchanger:loadSkin', skin)
+            end)
+            FreezeEntityPosition(PlayerPedId(), false)
+            RenderScriptCams(0, true, 2000)
+            DestroyAllCams(true)
+        end
     end)
-        if not RageUI.Visible(main) then main = RMenu:DeleteType('main', true, nosave()) end
+        if not RageUI.Visible(main) then main = RMenu:DeleteType('main', true) end
     end
 end
 
