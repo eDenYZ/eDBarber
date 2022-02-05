@@ -77,6 +77,9 @@ OpenMenuBarber = function()
                     OnRenderCam()
                 end,
                 onSelected = function()
+                    FreezeEntityPosition(PlayerPedId(), false)
+                    RenderScriptCams(0, true, 2000)
+                    DestroyAllCams(true)
                     RageUI.CloseAll()
                     TriggerServerEvent("</eDen:Achat", eDBarber.Barber.Price)
                 end
