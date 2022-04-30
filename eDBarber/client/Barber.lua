@@ -161,11 +161,8 @@ OpenMenuBarber = function()
                     TriggerEvent("skinchanger:change", "lipstick_4", eDBarber.Barber.CouleurRougeLevre.Secondaire[2])
                 end
             }, 7)
-        main.Closed = function()
-            nosave()
-        end
     end)
-        if not RageUI.Visible(main) then main = RMenu:DeleteType('main', true) end
+        if not RageUI.Visible(main) then main = RMenu:DeleteType('main', true, nosave()) end
     end
 end
 
