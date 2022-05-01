@@ -1,7 +1,7 @@
 OpenMenuBarber = function()
     local main = RageUI.CreateMenu(("Menu %s"):format(eDBarber.NameMenu), "Shop "..eDBarber.NameMenu);
     main.EnableMouse = true
-    main:AddInstructionButton({[1] = GetControlInstructionalButton(0, 44, 0), [2] = "Rotation Droitee"})
+    main:AddInstructionButton({[1] = GetControlInstructionalButton(0, 44, 0), [2] = "Rotation Droite"})
     main:AddInstructionButton({[1] = GetControlInstructionalButton(0, 51, 0), [2] = "Rotation Gauche"})
     RageUI.Visible(main, not RageUI.Visible(main))
     while main do
